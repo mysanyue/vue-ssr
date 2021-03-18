@@ -1,0 +1,51 @@
+[
+  {
+    "path": "/",
+    "component": "E:\\\\work github\\\\note\\\\src\\\\vue-ssr\\\\nuxt-base\\\\pages\\\\layout",
+    "children": [
+      {
+        "path": "",
+        "name": "home",
+        "component": "E:\\\\work github\\\\note\\\\src\\\\vue-ssr\\\\nuxt-base\\\\pages\\\\home",
+        "_name": "_587cb9b0"
+      },
+      {
+        "path": "/login",
+        "name": "login",
+        "component": "E:\\\\work github\\\\note\\\\src\\\\vue-ssr\\\\nuxt-base\\\\pages\\\\auth\\\\login",
+        "_name": "_62893250"
+      },
+      {
+        "path": "/register",
+        "name": "register",
+        "component": "E:\\\\work github\\\\note\\\\src\\\\vue-ssr\\\\nuxt-base\\\\pages\\\\auth\\\\login",
+        "_name": "_62893250"
+      },
+      {
+        "path": "/profile/:username",
+        "name": "profile",
+        "component": "E:\\\\work github\\\\note\\\\src\\\\vue-ssr\\\\nuxt-base\\\\pages\\\\profile",
+        "_name": "_018f6a80"
+      },
+      {
+        "path": "/settings",
+        "name": "settings",
+        "component": "E:\\\\work github\\\\note\\\\src\\\\vue-ssr\\\\nuxt-base\\\\pages\\\\settings",
+        "_name": "_79111dec"
+      },
+      {
+        "path": "/editor",
+        "name": "editor",
+        "component": "E:\\\\work github\\\\note\\\\src\\\\vue-ssr\\\\nuxt-base\\\\pages\\\\editor",
+        "_name": "_37ab3d14"
+      },
+      {
+        "path": "/article/:slug",
+        "name": "article",
+        "component": "E:\\\\work github\\\\note\\\\src\\\\vue-ssr\\\\nuxt-base\\\\pages\\\\article",
+        "_name": "_33fae3e6"
+      }
+    ],
+    "_name": "_200d899a"
+  }
+]
