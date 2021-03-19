@@ -4,7 +4,7 @@
       <div class="container page">
         <div class="row">
           <div class="col-md-6 offset-md-3 col-xs-12">
-            <h1 class="text-xs-center">{{ isLogin? '登录': '注册' }}</h1>
+            <h1 class="text-xs-center">{{ isLogin ? '登录' : '注册' }}</h1>
             <p class="text-xs-center">
               <nuxt-link v-if="isLogin" to="/register">需要一个帐户吗?</nuxt-link>
               <nuxt-link v-if="!isLogin" to="/login">已经有账户?</nuxt-link>
@@ -16,16 +16,16 @@
             </ul>
             <form @submit.prevent="onSubmit">
               <fieldset v-if="!isLogin" class="form-group">
-                <input v-model="user.username" class="form-control form-control-lg" type="text" placeholder="Your Name" required>
+                <input v-model="user.username" class="form-control form-control-lg" type="text" placeholder="Your Name" required />
               </fieldset>
               <fieldset class="form-group">
-                <input v-model="user.email" class="form-control form-control-lg" type="text" placeholder="Email" required>
+                <input v-model="user.email" class="form-control form-control-lg" type="text" placeholder="Email" required />
               </fieldset>
               <fieldset class="form-group">
-                <input v-model="user.password" class="form-control form-control-lg" type="password" placeholder="Password" required minlength="8">
+                <input v-model="user.password" class="form-control form-control-lg" type="password" placeholder="Password" minlength="8" />
               </fieldset>
               <button class="btn btn-lg btn-primary pull-xs-right">
-                {{ isLogin? '登录': '注册' }}
+                {{ isLogin ? '登录' : '注册' }}
               </button>
             </form>
           </div>
@@ -47,7 +47,7 @@ export default {
     return {
       user: {
         username: '',
-        email: 'myzony@qq.com',
+        email: 'sanyue@qq.com',
         password: 'bb123456'
       },
       errors: {}, // 错误信息

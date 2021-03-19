@@ -46,8 +46,8 @@
               <nuxt-link to="/settings" class="nav-link"><i class="ion-gear-a"></i>&nbsp;设置</nuxt-link>
             </li>
             <li class="nav-item userinfo">
-              <nuxt-link class="nav-link" to="/profile/大三娃">
-                <img :src="userImage" alt="大三娃" />
+              <nuxt-link class="nav-link" :to="{ name: 'profile', params: { username: user.username } }">
+                <img :src="user.image" />
                 {{ user.username }}
               </nuxt-link>
             </li>
@@ -89,9 +89,6 @@ import { mapState } from 'vuex'
 export default {
   name: 'layout',
   computed: {
-    userImage() {
-      return this.user.images || 'https://img.bosszhipin.com/beijin/upload/avatar/20200629/3b294d1c7a5bcff95e2f1f53cafb95301638b65607ad1b7e3eba44b17b426016_s.jpg'
-    },
     ...mapState(['user'])
   }
 }
