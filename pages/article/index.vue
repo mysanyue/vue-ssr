@@ -37,7 +37,7 @@ export default {
   name: 'article',
   head() {
     return {
-      title: `${this.article.title} - RealWorld`,
+      title: `${this.article.title} - 三月风`,
       meta: [
         { hid: 'description', name: 'description', content: this.article.description }
       ]

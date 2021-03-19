@@ -5,8 +5,8 @@
     <div class="home-page">
       <div class="banner">
         <div class="container">
-          <h1 class="logo-font">conduit</h1>
-          <p>A place to share your knowledge.</p>
+          <h1 class="logo-font">GitHub</h1>
+          <p>一个分享您的知识的地方</p>
         </div>
       </div>
 
@@ -16,10 +16,10 @@
             <div class="feed-toggle">
               <ul class="nav nav-pills outline-active">
                 <li v-if="user" class="nav-item">
-                  <nuxt-link :to="{ name: 'home', query: { tab: 'your_feed' } }" :class="{ active: tab === 'your_feed' }" exact class="nav-link">Your Feed</nuxt-link>
+                  <nuxt-link :to="{ name: 'home', query: { tab: 'your_feed' } }" :class="{ active: tab === 'your_feed' }" exact class="nav-link">我的文章</nuxt-link>
                 </li>
                 <li class="nav-item">
-                  <nuxt-link :to="{ name: 'home', query: { tab: 'global_feed' } }" :class="{ active: tab === 'global_feed' }" exact class="nav-link">Global Feed</nuxt-link>
+                  <nuxt-link :to="{ name: 'home', query: { tab: 'global_feed' } }" :class="{ active: tab === 'global_feed' }" exact class="nav-link">全部文章</nuxt-link>
                 </li>
                 <li v-if="tag" class="nav-item">
                   <nuxt-link :to="{ name: 'home', query: { tab: 'tag', tag } }" :class="{ active: tab === 'tag' }" class="nav-link">#{{ tag }}</nuxt-link>

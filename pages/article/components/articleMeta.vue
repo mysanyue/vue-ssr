@@ -9,12 +9,12 @@
     </div>
     <button :class="{ active: article.author.following }" class="btn btn-sm btn-outline-secondary">
       <i class="ion-plus-round"></i>
-      &nbsp; Follow Eric Simons <span class="counter">(10)</span>
+      &nbsp; 收藏 <span class="counter">(10)</span>
     </button>
     &nbsp;&nbsp;
     <button :class="{ active: article.author.favorited }" class="btn btn-sm btn-outline-primary">
       <i class="ion-heart"></i>
-      &nbsp; Favorite Post <span class="counter">(29)</span>
+      &nbsp; 点赞 <span class="counter">(29)</span>
     </button>
   </div>
 </template>
