@@ -4,7 +4,7 @@
       <div class="banner">
         <div class="container">
           <h1>{{ article.title }}</h1>
-          <article-meta :article="article" />
+          <article-meta :data="article" />
         </div>
       </div>
 
@@ -16,11 +16,11 @@
         <hr />
 
         <div class="article-actions">
-          <article-meta :article="article" />
+          <article-meta :data="article" />
         </div>
 
         <div class="row">
-          <article-comments :article="article" />
+          <article-comments :data="article" />
         </div>
       </div>
     </div>

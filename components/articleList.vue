@@ -1,3 +1,11 @@
+<style scoped>
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+</style>
 <template>
   <ul>
     <li v-for="article in articles" :key="article.slug" class="article-preview">

@@ -15,6 +15,15 @@ class User {
   settingUser(data) {
     return request.put('/api/user', data)
   }
+
+  /**
+   * @description 根据用户名获取用户信息
+   * @param {string} name 
+   * @returns 
+   */
+  getProfiles(name) {
+    return request.get(`/api/profiles/${name}`)
+  }
 }
 
 export default new User()

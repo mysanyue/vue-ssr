@@ -32,7 +32,7 @@ import articleApi from '@/api/article'
 export default {
   name: 'articleComments',
   props: {
-    article: {
+    data: {
       type: Object,
       required: true
     }
@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     async getComments() {
-      const { data } = await articleApi.getComments(this.article.slug)
+      const { data } = await articleApi.getComments(this.data.slug)
       this.comments = data.comments
     }
   }

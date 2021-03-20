@@ -1,7 +1,7 @@
 <style lang="less" scoped>
 .user-container {
   .nav-link {
-    cursor: pointer;
+    cursor: pointer !important;
   }
 }
 </style>
@@ -12,9 +12,8 @@
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-md-10 offset-md-1">
-              <!-- <img src="http://i.imgur.com/Qr71crq.jpg" class="user-img" /> -->
               <img :src="user.image" class="user-img" />
-              <!-- <h4>{{ user.username }}</h4> -->
+              <h4>{{ user.username }}</h4>
               <p>{{ user.bio }}</p>
               <nuxt-link to="/settings" class="btn btn-sm btn-outline-secondary action-btn">
                 <i class="ion-plus-round"></i>
@@ -31,10 +30,10 @@
             <div class="articles-toggle">
               <ul class="nav nav-pills outline-active">
                 <li class="nav-item">
-                  <a :class="{ active: tab === 'article' }" class="nav-link">我发布的文章</a>
+                  <nuxt-link :to="{ name: 'profile', params: { username: user.username }, query: { tab: 'my' } }" :class="{ active: tab === 'my' }" exact class="nav-link">我发布的文章</nuxt-link>
                 </li>
                 <li class="nav-item">
-                  <a :class="{ active: tab !== 'article' }" class="nav-link">我点赞的文章</a>
+                  <nuxt-link :to="{ name: 'profile', params: { username: user.username }, query: { tab: 'fav' } }" :class="{ active: tab === 'fav' }" exact class="nav-link">我点赞的文章</nuxt-link>
                 </li>
               </ul>
             </div>
@@ -49,8 +48,8 @@
 
 <script>
 import articleApi from '@/api/article'
-import { mapState } from 'vuex'
-import articleList from '../../components/articleList.vue'
+import articleList from '../../components/articleList'
+import userApi from '@/api/user'
 
 export default {
   components: { articleList },
@@ -61,25 +60,27 @@ export default {
 
     }
   },
-  computed: {
-    ...mapState(['user'])
-  },
-  async asyncData({ params, store }) {
+  // 解决点击页码 重新加载 asyncData 问题
+  // url 地址栏有相应参数，重新触发 asyncData
+  watchQuery: ['tab'],
+  async asyncData({ params, query, store }) {
     // 获取文章列表
     const page = Number.parseInt(params.page || 1)
     const limit = 20
-    const tab = params.tag || 'article'
-    const author = params.username || null
-    const favorites = params.favorites || null
+    const author = params.username
+    const tab = query.tab
+    let user = null;
+
+    const userRet = await userApi.getProfiles(author)
+    if (userRet) user = userRet.data.profile
 
     const ret = await articleApi.getArticles({
       limit,
-      favorites,
-      author,
+      favorited: query.tab === 'fav' ? author : void 0,
+      author: query.tab === 'fav' ? void 0 : author,
       offset: (page - 1) * limit
     })
 
-    console.log(ret)
     const { articles, articlesCount } = ret.data
     // articles.forEach(e => e.favoriteDisabled = false)
     return {
@@ -87,7 +88,8 @@ export default {
       articlesCount,
       limit,
       page,
-      tab
+      tab: tab || 'my',
+      user
     }
   }
 }

@@ -3,6 +3,14 @@ import routers from './routers'
  * Nuxt.js 配置文件
  */
 module.exports = {
+  build: {
+    extend(config, { isClient }) {
+      // 为 客户端打包 进行扩展配置
+      if (isClient) {
+        config.devtool = 'eval-source-map'
+      }
+    }
+  },
   router: {
     // 配置路由高亮类名
     linkActiveClass: 'active',

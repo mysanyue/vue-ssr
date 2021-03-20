@@ -16,10 +16,10 @@
                   <textarea v-model="params.body" class="form-control" rows="8" placeholder="文章内容 - markdown 格式"></textarea>
                 </fieldset>
                 <fieldset class="form-group">
-                  <input v-model="tagList" type="text" class="form-control" placeholder="文章标签 - 多个以逗号分隔" />
+                  <input v-model="tagList" type="text" class="form-control" placeholder="文章标签 - 多个以逗号分隔 (英文逗号)" />
                   <div class="tag-list"></div>
                 </fieldset>
-                <button @click="publish" :disabled="isLoading" class="btn btn-lg pull-xs-right btn-primary" type="button">发布一篇</button>
+                <button @click="publish" :disabled="isLoading" class="btn btn-lg pull-xs-right btn-primary" type="button">{{ id ? '重新发布' : '发布一篇' }}</button>
               </fieldset>
             </form>
           </div>
@@ -38,6 +38,7 @@ export default {
   name: 'editor',
   data() {
     return {
+      id: null,
       isLoading: false,
       params: {
         title: '',
@@ -47,11 +48,30 @@ export default {
       tagList: ''
     }
   },
+  mounted() {
+    this.id = this.$route.query.id
+    if (this.id) this.getArticleDetail()
+  },
   methods: {
     async publish() {
-      this.params.tagList = this.tagList.split('，')
-      const ret = await articleApi.addArticle({ article: this.params })
-      if (ret) this.$router.push('/')
+      this.tagList.replace(/，/g, ',')
+      this.params.tagList = this.tagList.split(',')
+      if (this.id) {
+        const ret = await articleApi.updateArticle(this.id, { article: this.params })
+        if (ret.data) this.$router.go(-1)
+      } else {
+        const ret = await articleApi.addArticle({ article: this.params })
+        if (ret.data) this.$router.push('/')
+      }
+    },
+    async getArticleDetail() {
+      const ret = await articleApi.getArticle(this.id)
+      const { title, description, body, tagList } = ret.data.article
+
+      this.params.title = title
+      this.params.description = description
+      this.params.body = body
+      this.tagList = tagList.join(',')
     }
   }
 }
