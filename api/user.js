@@ -10,6 +10,11 @@ class User {
   register(data) {
     return request.post('/api/users', data)
   }
+
+  // 设置用户信息
+  settingUser(data) {
+    return request.put('/api/user', data)
+  }
 }
 
 export default new User()

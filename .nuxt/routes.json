@@ -1,51 +1,51 @@
 [
   {
     "path": "/",
-    "component": "E:\\\\work github\\\\note\\\\src\\\\vue-ssr\\\\nuxt-base\\\\pages\\\\layout",
+    "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\layout",
     "children": [
       {
         "path": "",
         "name": "home",
-        "component": "E:\\\\work github\\\\note\\\\src\\\\vue-ssr\\\\nuxt-base\\\\pages\\\\home",
-        "_name": "_587cb9b0"
+        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\home",
+        "_name": "_532f959f"
       },
       {
         "path": "/login",
         "name": "login",
-        "component": "E:\\\\work github\\\\note\\\\src\\\\vue-ssr\\\\nuxt-base\\\\pages\\\\auth\\\\login",
-        "_name": "_62893250"
+        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\auth\\\\login",
+        "_name": "_9e75defe"
       },
       {
         "path": "/register",
         "name": "register",
-        "component": "E:\\\\work github\\\\note\\\\src\\\\vue-ssr\\\\nuxt-base\\\\pages\\\\auth\\\\login",
-        "_name": "_62893250"
+        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\auth\\\\login",
+        "_name": "_9e75defe"
       },
       {
         "path": "/profile/:username",
         "name": "profile",
-        "component": "E:\\\\work github\\\\note\\\\src\\\\vue-ssr\\\\nuxt-base\\\\pages\\\\profile",
-        "_name": "_018f6a80"
+        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\profile",
+        "_name": "_1ae330e9"
       },
       {
         "path": "/settings",
         "name": "settings",
-        "component": "E:\\\\work github\\\\note\\\\src\\\\vue-ssr\\\\nuxt-base\\\\pages\\\\settings",
-        "_name": "_79111dec"
+        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\settings",
+        "_name": "_5a7a063a"
       },
       {
         "path": "/editor",
         "name": "editor",
-        "component": "E:\\\\work github\\\\note\\\\src\\\\vue-ssr\\\\nuxt-base\\\\pages\\\\editor",
-        "_name": "_37ab3d14"
+        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\editor",
+        "_name": "_3fe5922d"
       },
       {
         "path": "/article/:slug",
         "name": "article",
-        "component": "E:\\\\work github\\\\note\\\\src\\\\vue-ssr\\\\nuxt-base\\\\pages\\\\article",
-        "_name": "_33fae3e6"
+        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\article",
+        "_name": "_01ad7436"
       }
     ],
-    "_name": "_200d899a"
+    "_name": "_4bb46bea"
   }
 ]
