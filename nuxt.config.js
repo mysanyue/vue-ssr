@@ -26,9 +26,9 @@ module.exports = {
     '~/plugins/request.js',
     '~/plugins/dayjs.js'
   ],
-  // // 运行环境
-  // server: {
-  //   host: '0.0.0.0',
-  //   port: 8181
-  // }
+  // 运行环境
+  server: {
+    host: '0.0.0.0',
+    port: 8181
+  }
 }
