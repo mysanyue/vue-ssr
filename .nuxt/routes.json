@@ -6,46 +6,38 @@
       {
         "path": "",
         "name": "home",
-        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\home",
-        "_name": "_532f959f"
+        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\home"
       },
       {
         "path": "/login",
         "name": "login",
-        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\auth\\\\login",
-        "_name": "_9e75defe"
+        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\auth\\\\login"
       },
       {
         "path": "/register",
         "name": "register",
-        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\auth\\\\login",
-        "_name": "_9e75defe"
+        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\auth\\\\login"
       },
       {
         "path": "/profile/:username",
         "name": "profile",
-        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\profile",
-        "_name": "_1ae330e9"
+        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\profile"
       },
       {
         "path": "/settings",
         "name": "settings",
-        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\settings",
-        "_name": "_5a7a063a"
+        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\settings"
       },
       {
         "path": "/editor",
         "name": "editor",
-        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\editor",
-        "_name": "_3fe5922d"
+        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\editor"
       },
       {
         "path": "/article/:slug",
         "name": "article",
-        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\article",
-        "_name": "_01ad7436"
+        "component": "E:\\\\work github\\\\vue-ssr\\\\pages\\\\article"
       }
-    ],
-    "_name": "_4bb46bea"
+    ]
   }
 ]
