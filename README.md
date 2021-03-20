@@ -9,6 +9,7 @@ vue 同构应用，自动部署
 4. `git tag v0.1.0` 打标签
 5. `git tag`  列出标签
 6. `git push origin v0.1.0`
+
 ### DEOME 地址
 
 [https://demo.realworld.io/#](https://demo.realworld.io/#)
@@ -31,5 +32,9 @@ vue 同构应用，自动部署
   - [x]个人中心
   - [x]个人信息更改
 
-- 本作业需要 放在 github 个人仓库，并且实现自动部署
 
+作业
+
+仓库地址：[https://github.com/mysanyue/vue-ssr](https://github.com/mysanyue/vue-ssr)
+
+部署成功地址：[vue-ssr](http://117.50.62.5:8181/)
