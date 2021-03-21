@@ -10,9 +10,10 @@ vue 同构应用，自动部署
 5. `git tag`  列出标签
 6. `git push origin v0.1.0`
 
-### DEOME 地址
+### ubuntu 启动pm2
 
-[https://demo.realworld.io/#](https://demo.realworld.io/#)
+1. `cd vue-ssr`
+2. `pm2 start npm -- start`
 
 ### 要求
 
